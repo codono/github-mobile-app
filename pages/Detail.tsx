@@ -13,15 +13,15 @@ import Markdown from 'react-native-markdown-renderer';
 const HeaderInfo = styled.View`
   display: flex;
   flex-direction: row;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
   flex: 1;
   padding: 12px 0;
   border-bottom-width: 1px;
 `;
 
 const RowView = styled.View`
-  width: 100%;
+  flex: 1;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -64,8 +64,12 @@ export const Detail = (props: any) => {
 
   return (
     <SafeAreaView>
-      <ScrollView>
-        <RowView style={{alignItems: 'center'}}>
+      <ScrollView style={{backgroundColor: '#ffffff'}}>
+        <RowView
+          style={{
+            alignItems: 'center',
+            maxWidth: '100%',
+          }}>
           <Image
             source={{uri: issueInfo?.user?.avatar_url}}
             style={{width: 40, height: 40, margin: 12}}
