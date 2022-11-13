@@ -1,6 +1,7 @@
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React, {useContext} from 'react';
+import {Detail} from '../pages/Detail';
 import {Home} from '../pages/Home';
 import {Context} from '../provider/RootProvider';
 
@@ -15,6 +16,7 @@ function RootStack(): React.ReactElement {
         initialRouteName="home"
         screenOptions={{title: `${organizationName} / ${repositoryName}`}}>
         <Stack.Screen name="home" component={Home} />
+        <Stack.Screen name="detail" component={Detail} />
       </Stack.Navigator>
     </NavigationContainer>
   );
