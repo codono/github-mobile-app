@@ -4,12 +4,12 @@ interface Props {
   children?: React.ReactElement;
 }
 
-function RootProvider({children}: Props): React.ReactElement {
-  const Context = createContext({
-    organizationName: '',
-    repositoryName: '',
-  });
+export const Context = createContext({
+  organizationName: '',
+  repositoryName: '',
+});
 
+export const RootProvider = ({children}: Props) => {
   return (
     <Context.Provider
       value={{
@@ -19,6 +19,4 @@ function RootProvider({children}: Props): React.ReactElement {
       {children}
     </Context.Provider>
   );
-}
-
-export default RootProvider;
+};

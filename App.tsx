@@ -9,9 +9,8 @@
  */
 
 import React from 'react';
-
 import RootStack from './navigation/RootStack';
-import RootProvider from './provider/RootProvider';
+import {RootProvider} from './provider/RootProvider';
 
 const App = () => {
   return (
